@@ -1,0 +1,30 @@
+{
+  "name": "stream-lazy-map",
+  "version": "1.0.0",
+  "description": "Runs an async map function over every chunk of a stream and applies backpressure according to the runtime of that async function.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Fábio Santos <fabiosantosart@gmail.com>",
+  "license": "WTFPL",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fabiosantoscode/stream-lazy-map.git"
+  },
+  "keywords": [
+    "stream",
+    "map"
+  ],
+  "bugs": {
+    "url": "https://github.com/fabiosantoscode/stream-lazy-map/issues"
+  },
+  "homepage": "https://github.com/fabiosantoscode/stream-lazy-map#readme",
+  "devDependencies": {
+    "event-stream": "^3.3.1",
+    "mocha": "^2.2.5"
+  }
+}
