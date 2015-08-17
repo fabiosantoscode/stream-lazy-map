@@ -7,8 +7,9 @@ module.exports =
 function lazyMap(mapFn, options) {
     options = options || {}
 
-    var limit = options.limit || 10
-    options.highWaterMark = 10
+    assert(options.limit && options.limit > 0, 'Options.limit should be a number greater than 0!')
+
+    var limit = options.limit
 
     var self = new stream.Transform(options || {})
 
