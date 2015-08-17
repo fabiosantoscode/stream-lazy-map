@@ -29,7 +29,7 @@ function lazyMap(mapFn, options) {
             if (calledBack)
                 self.push(data)
             else
-                callback(data)
+                callback(err || null, data)
             if (currentlyExecuting === 0 && endFlushing) {
                 endFlushing()
                 self.emit('end')

@@ -22,7 +22,7 @@ describe('stream-lazy-map', function() {
                 setTimeout(function() {
                     cb(null, chunk + 1)
                 }, 100)
-            }, { objectMode: true, limit: 10 }))
+            }, { objectMode: true, limit: 2 }))
             .pipe(es.writeArray(function(err, arr) {
                 ok(!err)
                 ok.deepEqual(arr, [2,3,4,5])
