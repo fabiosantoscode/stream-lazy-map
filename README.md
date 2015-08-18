@@ -9,6 +9,11 @@ This uses node's backpressure algorithm to tell upstream to just chill out while
 And keeping the chunks in the same order of arrival is on by default, in case you're worried that sometimes your async operation can take a while.
 
 
+## Helmet warning
+
+*Wear a helmet* while using this module! This was never used in production, or anything. which is why it's not on NPM. I hate when I try to use a module which seems pretty good but doesn't work at all.
+
+
 ## Example
 
 In the example below, no matter how many objects the `reallyFastStream` can throw at us, there will be at most 10 `doSomethingAsync` operations running at any moment in time.
@@ -36,3 +41,6 @@ The first argument is the map function`(function mapper(data, callback) { callba
 
 Other stream options, such as `objectMode`, are passed as arguments to the `stream.Transform` constructor.
 
+## License
+
+WTFPL.
